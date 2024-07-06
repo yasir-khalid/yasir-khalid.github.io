@@ -12,21 +12,70 @@ $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // More theme colors could be added here...
-$primary: #454545;
+$primary: #282828;
 
 $spaces: ("0": 0, "1": 1.65rem, "2": 1.75rem);
 
 $margin-default: map-get($spaces, "2") map-get($spaces, "0");
 
 // Update some of Bulma's component & color variables
-$footer-padding: 3rem 1.5rem;
-$link: hsl(171, 100%, 41%);
+// $footer-padding: 3rem 1.5rem;
+// $link: hsl(171, 100%, 41%);
 
 // Custom Styles
 .card-gap {margin-top:1.75rem}
 .modal-trigger { cursor: pointer; }
 a.icon > strong {margin-left:.25rem}
 .modal-card-body div.content {margin:$margin-default}
+
+footer {
+    padding-top: 48px;
+    margin-bottom: 48px;
+    color: #303030;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+}
+
+footer a, footer a:visited { 
+    color: #525252; 
+}
+footer a:hover, footer a:focus { 
+    color: #000000; 
+}
+
+/* Center the entire row */
+footer .row {
+    display: flex; /* Apply Flexbox */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Center the content within the row */
+footer .twelve.columns {
+    display: flex; /* Apply Flexbox */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Social links */
+footer .social-links {
+    margin: 18px 0 30px 0;
+    padding: 0;
+    font-size: 30px;
+    list-style: none; /* Ensure no bullet points */
+    display: flex; /* Apply Flexbox */
+    justify-content: center; /* Center items horizontally */
+}
+
+footer .social-links li {
+    margin: 0;
+    padding: 0;
+    margin-left: 42px;
+    color: #F06000;
+}
+
+footer .social-links li:first-child { 
+    margin-left: 0; 
+}
 
 // import everything - alternatively import just what you need: https://bulma.io/documentation/overview/modular/
 @import "~bulma/bulma"; 
